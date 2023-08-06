@@ -1,0 +1,15 @@
+.bar-graph {
+  width: 100px;
+  height: 200px;
+  background-color: lightgray;
+  margin-top: 20px;
+  position: relative;
+}
+
+.bar {
+  width: 100%;
+  background-color: #007bff;
+  position: absolute;
+  bottom: 0;
+  transition: height 0.3s;
+}
