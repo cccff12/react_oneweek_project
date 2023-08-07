@@ -5,13 +5,13 @@ const ProMain = () => {
   const [inputValue1, setInputValue1] = useState(0);
   const [inputValue2, setInputValue2] = useState(0);
 
-  const handleInputChange1 = (event) => {
-    const newValue = parseInt(event.target.value, 10);
+  const handleInputChange1 = (e) => {
+    const newValue = Number(e.target.value, 10);
     setInputValue1(newValue);
   };
 
-  const handleInputChange2 = (event) => {
-    const newValue = parseInt(event.target.value, 10);
+  const handleInputChange2 = (e) => {
+    const newValue = Number(e.target.value, 10);
     setInputValue2(newValue);
   };
 
