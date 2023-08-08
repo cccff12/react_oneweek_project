@@ -35,7 +35,7 @@ const ProMain = () => {
       />
       <input
         // type="number"
-        placeholder="방금 먹은 단백질을 입력하세요"
+        placeholder="오늘 먹은 단백질을 입력하세요"
         name="num2"
         value={nums.num2}
         onChange={handleInputChange}
@@ -44,7 +44,7 @@ const ProMain = () => {
         <div
           className="bar"
           style={{
-            height: `${nums.num1}px`,
+            height: `${nums.num1 * 2}px`,
 
             backgroundColor: isFirstInputExceeded ? "red" : "blue",
           }}

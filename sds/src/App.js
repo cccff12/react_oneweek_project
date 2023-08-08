@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>css</h1>
+        <h1>단백질 섭취</h1>
       </header>
       <Main />
     </div>
