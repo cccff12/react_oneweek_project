@@ -44,7 +44,7 @@ const ProMain = () => {
         <div
           className="bar"
           style={{
-            height: `${nums.num1 * 2}px`,
+            width: `${nums.num1 * 2}px`,
 
             backgroundColor: isFirstInputExceeded ? "red" : "blue",
           }}

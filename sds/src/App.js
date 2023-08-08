@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>단백질 섭취</h1>
+        <h1>그거 그렇게 먹는거 맞나?</h1>
       </header>
       <Main />
     </div>
