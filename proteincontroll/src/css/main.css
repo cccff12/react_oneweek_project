@@ -1,9 +1,10 @@
 .bar-graph {
   width: 60%;
-  height: 100px;
+  height: 50px;
   background-color: lightgray;
   margin-top: 20px;
   position: relative;
+  display: none;
 }
 
 .bar {
@@ -16,23 +17,9 @@
 }
 
 .input1 {
-  position: relative;
-  display: inline-block;
-  padding: 10px 20px;
-
-  font-size: 16px;
-  text-decoration: none;
-  text-transform: uppercase;
-  overflow: hidden;
-  transition: 0.5s;
-  margin-top: 40px;
-  letter-spacing: 4px;
-  outline: #007bff;
+  display: none;
 }
-.input1:focus {
-  background: #03e9f4;
-  border-radius: 5px;
-  box-shadow: 0 0 5px #03e9f4, 0 0 25px #0323d5, 0 0 50px #03e9f4,
-    0 0 100px #03e9f4;
-  color: black;
+
+.input2 {
+  display: none;
 }

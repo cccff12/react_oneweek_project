@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../css/main.css";
-
+import "../css/first.scss";
 const ProMain = () => {
   const [nums, setInputValue] = useState({
     num1: "",
@@ -24,12 +24,41 @@ const ProMain = () => {
   // 일반용 최대치
   const isFirstInputExceeded2 = nums.num2 >= nums.num1 * 0.8;
 
+  document.querySelectorAll(".inner").forEach((button) => {
+    button.onmousemove = (e) => {
+      const target = e.target;
+      const rect = target.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      button.style.setProperty("--x", `${x}px`);
+      button.style.setProperty("--y", `${y}px`);
+      button.style.setProperty("--height", `${rect.height}px`);
+      button.style.setProperty("--width", `${rect.width}px`);
+    };
+  });
+
   return (
     <>
+      <div className="concontainer">
+        <div class="container">
+          <div class="inner">
+            <button type="button">일반식</button>
+            <div class="blob"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="inner">
+            <button type="button">운동식</button>
+            <div class="blob"></div>
+          </div>
+        </div>
+      </div>
       <input
         // type="number"
         name="num1"
         placeholder="몸무게를 입력하세요"
+        className="input1"
         value={nums.num1}
         onChange={handleInputChange}
       />
@@ -37,6 +66,7 @@ const ProMain = () => {
         // type="number"
         placeholder="오늘 먹은 단백질을 입력하세요"
         name="num2"
+        className="input2"
         value={nums.num2}
         onChange={handleInputChange}
       />
@@ -45,7 +75,6 @@ const ProMain = () => {
           className="bar"
           style={{
             width: `${nums.num1 * 2}px`,
-
             backgroundColor: isFirstInputExceeded ? "red" : "blue",
           }}
         ></div>
