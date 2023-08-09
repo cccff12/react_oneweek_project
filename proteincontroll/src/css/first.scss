@@ -3,15 +3,6 @@
   src: url("https://assets.codepen.io/383755/avant-garde.woff2") format("woff2");
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-html {
-  width: 100vw;
-  height: 100vh;
-}
 body,
 html {
   height: 100%;
@@ -38,17 +29,11 @@ body {
     box-sizing: border-box;
   }
 }
-.wrapper {
-  width: 1530px;
-  display: flex;
-  justify-content: center;
-  // margin-right: 10%; /* 오른쪽 여백 추가 */
-}
+
 .concontainer {
   width: 100%;
-  width: 1190px;
   display: flex;
-  justify-content: flex-end; /* 변경된 부분 */
+  justify-content: center;
   margin-right: 10%; /* 오른쪽 여백 추가 */
 }
 .container {

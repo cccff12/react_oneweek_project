@@ -64,25 +64,16 @@ const ProMain = () => {
     };
   });
 
-  const [isAnimating, setIsAnimating] = useState(false);
-
-  const toggleAnimation = () => {
-    setIsAnimating(!isAnimating);
-  };
   return (
     <div className="super">
       <div className="marquee1">
-        닭가슴살은 100g당 28g의 단백질이 들어있어요{" "}
+        닭가슴살은 100g당 23g의 단백질이 들어있어요(편의점에서 파는 팩이 100g){" "}
       </div>
       <div className="marquee2">
-        닭가슴살은 100g당 28g의 단백질이 들어있어요{" "}
+        삼겹살은 100g당 17g의 단백질이 들어있어요(1인분 : 200g){" "}
       </div>
-      <div className="marquee3">
-        닭가슴살은 100g당 28g의 단백질이 들어있어요{" "}
-      </div>
-      <div className="marquee4">
-        닭가슴살은 100g당 28g의 단백질이 들어있어요{" "}
-      </div>
+      <div className="marquee3">목살은 100g당 23g의 단백질이 들어있어요 </div>
+      <div className="marquee4">소곱창은 100g당 9g의 단백질이 들어있어요 </div>
       {/* 일반식과 운동식버튼 */}
       <div className="concontainer">
         <div class="container">
@@ -131,7 +122,7 @@ const ProMain = () => {
           {/* 막대그래프로 나타나는 곳 */}
           <div className="bar-graph">
             <div
-              className="bar" //{nums2.num1 > 40 ? "bar" : "bar2"}
+              className="bar"
               style={{
                 width: `${nums2.num1 * 15}px`,
                 backgroundColor: isFirstInputExceeded ? "red" : "blue",
@@ -174,15 +165,13 @@ const ProMain = () => {
       )}
       <div className="barblank"></div>
       <div className="marquee5">
-        닭가슴살은 100g당 28g의 단백질이 들어있어요{" "}
+        마라탕은 100g당 10g의 단백질이 들어있어요(1인분 250g){" "}
       </div>
       <div className="marquee6">
-        닭가슴살은 100g당 28g의 단백질이 들어있어요{" "}
+        떡볶이는 100g당 7g의 단백질이 들어있어요(1인분 200g){" "}
       </div>
-      <div className="marquee7">
-        닭가슴살은 100g당 28g의 단백질이 들어있어요{" "}
-      </div>
-      <div className="marquee8">이게 보이나요? </div>
+      <div className="marquee7">단백질은 한 끼에 20 ~ 40g만 드세요 </div>
+      <div className="marquee8">물은 100g당 0g의 단백질이 들어있어요 </div>
     </div>
   );
 };
