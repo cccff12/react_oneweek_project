@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import "../css/main.css";
 import "../css/first.scss";
+import "../css/MyComponent.css";
+import { CSSTransition } from "react-transition-group";
+
 const ProMain = () => {
   const [nums, setInputValue] = useState({
     num1: "",
@@ -61,8 +64,25 @@ const ProMain = () => {
     };
   });
 
+  const [isAnimating, setIsAnimating] = useState(false);
+
+  const toggleAnimation = () => {
+    setIsAnimating(!isAnimating);
+  };
   return (
-    <>
+    <div className="super">
+      <div className="marquee1">
+        닭가슴살은 100g당 28g의 단백질이 들어있어요{" "}
+      </div>
+      <div className="marquee2">
+        닭가슴살은 100g당 28g의 단백질이 들어있어요{" "}
+      </div>
+      <div className="marquee3">
+        닭가슴살은 100g당 28g의 단백질이 들어있어요{" "}
+      </div>
+      <div className="marquee4">
+        닭가슴살은 100g당 28g의 단백질이 들어있어요{" "}
+      </div>
       {/* 일반식과 운동식버튼 */}
       <div className="concontainer">
         <div class="container">
@@ -83,10 +103,12 @@ const ProMain = () => {
                 운동식
               </button>
             )}
+
             <div class="blob"></div>
           </div>
         </div>
       </div>
+
       {showInput2 && (
         <div className="input-container">
           {/* 헬창식 몸무게, 먹은량 입력칸 */}
@@ -109,7 +131,7 @@ const ProMain = () => {
           {/* 막대그래프로 나타나는 곳 */}
           <div className="bar-graph">
             <div
-              className={nums2.num1 > 100 ? "bar hit" : "bar2"}
+              className="bar" //{nums2.num1 > 40 ? "bar" : "bar2"}
               style={{
                 width: `${nums2.num1 * 15}px`,
                 backgroundColor: isFirstInputExceeded ? "red" : "blue",
@@ -150,7 +172,18 @@ const ProMain = () => {
           </div>
         </div>
       )}
-    </>
+      <div className="barblank"></div>
+      <div className="marquee5">
+        닭가슴살은 100g당 28g의 단백질이 들어있어요{" "}
+      </div>
+      <div className="marquee6">
+        닭가슴살은 100g당 28g의 단백질이 들어있어요{" "}
+      </div>
+      <div className="marquee7">
+        닭가슴살은 100g당 28g의 단백질이 들어있어요{" "}
+      </div>
+      <div className="marquee8">이게 보이나요? </div>
+    </div>
   );
 };
 

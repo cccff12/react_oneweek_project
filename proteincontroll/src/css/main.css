@@ -4,6 +4,7 @@
   /* background-color: lightgray; */
   margin-top: 20px;
   position: 0.1s;
+  margin-bottom: 50px;
 }
 
 .bar {
@@ -12,14 +13,27 @@
   background-color: #007bff;
   /* position: absolute; */
   bottom: 100px;
-  transition: width 10s;
+  transition: width 5s;
+  margin-bottom: 50px;
 }
 
 .input1 {
-}
-.proteintext {
-  text-align: center;
-  font-family: fantasy;
+  width: 300px;
+  height: 50px;
+  margin-right: 50px;
+  border-radius: 15px;
+  background-color: wheat;
 }
 .input2 {
+  width: 300px;
+  height: 50px;
+  margin-left: 50px;
+  border-radius: 15px;
+  transition: 0.7s;
+  background-color: wheat;
+}
+.super {
+  background-color: wheat;
+  width: 100%;
+  height: 100%;
 }
