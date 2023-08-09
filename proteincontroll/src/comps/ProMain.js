@@ -165,7 +165,7 @@ const ProMain = () => {
       )}
       <div className="barblank"></div>
       <div className="marquee5">
-        마라탕은 100g당 10g의 단백질이 들어있어요(1인분 250g){" "}
+        마라탕은 100g당 10g의 단백질이 들어있어요(1인분 250g & 한 접시 500g){" "}
       </div>
       <div className="marquee6">
         떡볶이는 100g당 7g의 단백질이 들어있어요(1인분 200g){" "}

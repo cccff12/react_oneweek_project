@@ -27,6 +27,11 @@ html {
   transition: width 5s;
   margin-bottom: 50px;
 }
+input::placeholder {
+  color: coral;
+  font-size: 1.2em;
+  font-style: italic;
+}
 
 .input1 {
   width: 300px;
