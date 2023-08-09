@@ -7,9 +7,32 @@ const ProMain = () => {
     num2: "",
   });
 
+  const [nums2, setInputValue2] = useState({
+    num1: "",
+    num2: "",
+  });
+
+  const [showInput, setShowInput] = useState(false);
+  const [showInput2, setShowInput2] = useState(false);
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setInputValue({ ...nums, [name]: value });
+  };
+
+  const handleInputChange2 = (e) => {
+    const { name, value } = e.target;
+    setInputValue2({ ...nums2, [name]: value });
+  };
+
+  const handleButtonClick = () => {
+    setShowInput(true);
+    setShowInput2(false);
+  };
+
+  const handleButtonClick2 = () => {
+    setShowInput2(true);
+    setShowInput(false);
   };
 
   // 첫 번째 입력값을 두 번째 입력값이 넘는지 확인함.
@@ -20,7 +43,7 @@ const ProMain = () => {
   // 그 함수를 넘는다면 빨간색으로 불 들어오게 해야할듯
 
   // 운동용 최대치
-  const isFirstInputExceeded = nums.num2 >= nums.num1 * 2.2;
+  const isFirstInputExceeded = nums2.num2 >= nums2.num1 * 2.2;
   // 일반용 최대치
   const isFirstInputExceeded2 = nums.num2 >= nums.num1 * 0.8;
 
@@ -40,45 +63,93 @@ const ProMain = () => {
 
   return (
     <>
+      {/* 일반식과 운동식버튼 */}
       <div className="concontainer">
         <div class="container">
           <div class="inner">
-            <button type="button">일반식</button>
+            {!showInput && (
+              <button type="button" onClick={handleButtonClick}>
+                일반식
+              </button>
+            )}
             <div class="blob"></div>
           </div>
         </div>
+
         <div class="container">
           <div class="inner">
-            <button type="button">운동식</button>
+            {!showInput2 && (
+              <button type="button" onClick={handleButtonClick2}>
+                운동식
+              </button>
+            )}
             <div class="blob"></div>
           </div>
         </div>
       </div>
-      <input
-        // type="number"
-        name="num1"
-        placeholder="몸무게를 입력하세요"
-        className="input1"
-        value={nums.num1}
-        onChange={handleInputChange}
-      />
-      <input
-        // type="number"
-        placeholder="오늘 먹은 단백질을 입력하세요"
-        name="num2"
-        className="input2"
-        value={nums.num2}
-        onChange={handleInputChange}
-      />
-      <div className="bar-graph">
-        <div
-          className="bar"
-          style={{
-            width: `${nums.num1 * 2}px`,
-            backgroundColor: isFirstInputExceeded ? "red" : "blue",
-          }}
-        ></div>
-      </div>
+      {showInput2 && (
+        <div className="input-container">
+          {/* 헬창식 몸무게, 먹은량 입력칸 */}
+          <input
+            // type="number"
+            name="num1"
+            placeholder="몸무게를 입력하세요"
+            className="input1"
+            value={nums2.num1}
+            onChange={handleInputChange2}
+          />
+          <input
+            // type="number"
+            placeholder="오늘 먹은 단백질을 입력하세요"
+            name="num2"
+            className="input2"
+            value={nums2.num2}
+            onChange={handleInputChange2}
+          />
+          {/* 막대그래프로 나타나는 곳 */}
+          <div className="bar-graph">
+            <div
+              className={nums2.num1 > 100 ? "bar hit" : "bar2"}
+              style={{
+                width: `${nums2.num1 * 15}px`,
+                backgroundColor: isFirstInputExceeded ? "red" : "blue",
+              }}
+            ></div>
+          </div>
+        </div>
+      )}
+
+      {/* 일반인 몸무게, 먹은량 입력칸 */}
+      {showInput && (
+        <div className="input-container">
+          <input
+            // type="number"
+            name="num1"
+            placeholder="몸무게를 입력하세요"
+            className="input1"
+            value={nums.num1}
+            onChange={handleInputChange}
+          />
+          <input
+            // type="number"
+            placeholder="오늘 먹은 단백질을 입력하세요"
+            name="num2"
+            className="input2"
+            value={nums.num2}
+            onChange={handleInputChange}
+          />
+          {/* 막대그래프로 나타나는 곳 */}
+          <div className="bar-graph">
+            <div
+              className="bar"
+              style={{
+                width: `${nums.num1 * 15}px`,
+                backgroundColor: isFirstInputExceeded2 ? "red" : "blue",
+              }}
+            ></div>
+          </div>
+        </div>
+      )}
     </>
   );
 };

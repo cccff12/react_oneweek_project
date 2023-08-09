@@ -1,10 +1,9 @@
 .bar-graph {
   width: 60%;
   height: 50px;
-  background-color: lightgray;
+  /* background-color: lightgray; */
   margin-top: 20px;
-  position: relative;
-  display: none;
+  position: 0.1s;
 }
 
 .bar {
@@ -13,13 +12,14 @@
   background-color: #007bff;
   /* position: absolute; */
   bottom: 100px;
-  transition: width 0.7s;
+  transition: width 10s;
 }
 
 .input1 {
-  display: none;
 }
-
+.proteintext {
+  text-align: center;
+  font-family: fantasy;
+}
 .input2 {
-  display: none;
 }

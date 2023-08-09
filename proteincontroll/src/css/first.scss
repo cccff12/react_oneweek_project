@@ -4,7 +4,7 @@
 }
 
 * {
-  border: 1px solid black;
+  // border: 1px solid black;
   padding: 0;
   margin: 0;
 }
@@ -35,9 +35,18 @@ body {
     box-sizing: border-box;
   }
 }
-.concontainer {
+.wrapper {
+  width: 1530px;
   display: flex;
-  margin-left: 40%;
+  justify-content: center;
+  // margin-right: 10%; /* 오른쪽 여백 추가 */
+}
+.concontainer {
+  width: 100%;
+  width: 1190px;
+  display: flex;
+  justify-content: flex-end; /* 변경된 부분 */
+  margin-right: 10%; /* 오른쪽 여백 추가 */
 }
 .container {
   position: relative;
