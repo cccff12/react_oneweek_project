@@ -96,7 +96,11 @@ const ProMain = () => {
         <div class="container">
           <div class="inner">
             {!showInput2 && (
-              <button type="button" onClick={handleButtonClick2}>
+              <button
+                type="button"
+                className="extrabuttonordinary"
+                onClick={handleButtonClick2}
+              >
                 운동식
               </button>
             )}

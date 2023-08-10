@@ -7,6 +7,7 @@ body,
 html {
   height: 100%;
   // display: grid;
+
   place-content: center;
   grid-template-columns: repeat(2, 1fr);
   width: 100vw;
@@ -33,7 +34,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-right: 10%; /* 오른쪽 여백 추가 */
+  // margin-right: 10%; /* 오른쪽 여백 추가 */
 }
 .container {
   position: relative;
@@ -44,8 +45,8 @@ body {
   justify-content: flex-end;
   mix-blend-mode: darken;
   z-index: 1;
-
   margin: 0 -1rem;
+
   &:last-of-type {
     justify-content: start;
   }
@@ -115,6 +116,7 @@ body {
   }
   button {
     padding: 3.5rem 6rem;
+
     border: none;
     font-size: 1.5rem;
     position: relative;
