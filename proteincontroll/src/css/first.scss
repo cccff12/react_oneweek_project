@@ -6,7 +6,7 @@
 body,
 html {
   height: 100%;
-  display: grid;
+  // display: grid;
   place-content: center;
   grid-template-columns: repeat(2, 1fr);
   width: 100vw;
@@ -23,7 +23,6 @@ html {
   padding: 0;
   overflow: hidden;
 }
-
 body {
   * {
     box-sizing: border-box;
@@ -60,7 +59,8 @@ body {
     --darkest: #1a2a6c;
   }
   .inner {
-    display: inline-block;
+    display: flex;
+    align-items: center;
     position: relative;
     pointer-events: all;
     z-index: 2;

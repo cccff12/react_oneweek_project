@@ -72,14 +72,20 @@ const ProMain = () => {
       <div className="marquee2">
         삼겹살은 100g당 17g의 단백질이 들어있어요(1인분 : 200g){" "}
       </div>
-      <div className="marquee3">목살은 100g당 23g의 단백질이 들어있어요 </div>
+      <div className="marquee3">
+        돼지목살은 100g당 23g의 단백질이 들어있어요{" "}
+      </div>
       <div className="marquee4">소곱창은 100g당 9g의 단백질이 들어있어요 </div>
       {/* 일반식과 운동식버튼 */}
       <div className="concontainer">
         <div class="container">
           <div class="inner">
             {!showInput && (
-              <button type="button" onClick={handleButtonClick}>
+              <button
+                className="buttonordinary"
+                type="button"
+                onClick={handleButtonClick}
+              >
                 일반식
               </button>
             )}
@@ -125,7 +131,7 @@ const ProMain = () => {
               className="bar"
               style={{
                 width: `${nums2.num1 * 15}px`,
-                backgroundColor: isFirstInputExceeded ? "red" : "blue",
+                backgroundColor: isFirstInputExceeded ? "red" : "#4F98FF",
               }}
             ></div>
           </div>
